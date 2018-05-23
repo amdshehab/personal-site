@@ -11,6 +11,15 @@ body {
   position: relative;
 }
 
+.text-box {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  top: 50%;
+}
+
 .top-flick {
   display: block;
   height: 1px;

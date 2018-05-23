@@ -25,6 +25,9 @@ export class FadeBox extends Component {
 
         return (
             <div style={box} className={this.props.direction + '' + 'main-container'}>
+                <span className="text-box">
+                    Hello
+                </span>
                 <span className="top-flick" />
                 <span className="right-flick" />
                 <span className="bottom-flick" />
