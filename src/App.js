@@ -9,11 +9,10 @@ class App extends Component {
     super(props);
   }
   render() {
+      const projects = ['About', 'Projects', 'Contact']
     return (
-      <div>
-        <FadeBox direction={'slide-in-from-left '} />
-        <FadeBox direction={'slide-in-from-right '} />
-        <FadeBox direction={'slide-in-from-left '} />
+      <div className="nav-container">
+        {projects.map((projects) => <FadeBox title={projects}/>)}
       </div>
     );
   }

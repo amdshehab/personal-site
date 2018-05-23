@@ -17,14 +17,18 @@ export class FadeBox extends Component {
     render() {
 
         const box = {
-            width: '300px',
-            height: '300px',
+            width: '200px',
+            height: '200px',
             border: '1px solid black',
-            backgroundColor: 'dimgray'
+            backgroundColor: 'dimgray',
+            flex: '1'
         };
 
         return (
-            <div style={box} className={this.props.direction + '' + 'main-container'}>
+            <div style={box} className="main-container">
+                <span>
+                    {this.props.title}
+                </span>
                 <span className="text-box">
                     Hello
                 </span>
