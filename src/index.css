@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+}
+
+.main-container {
+  position: relative;
+}
+
+.top-flick {
+  display: block;
+  height: 1px;
+  margin-top: 5px;
+  max-width: 98.3%;
+}
+
+.top-flick::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: dimgray;
+}
+
+.right-flick {
+  display: block;
+  right: 0;
+  position: absolute;
+  margin-right: 5px;
+  width: 1px;
+  max-height: 95%;
+}
+
+.right-flick::after {
+  display: block;
+  content: '';
+  width: 1px;
+  height: 0;
+  background-color: dimgray;
+}
+
+.bottom-flick {
+  position: absolute;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  bottom: 0;
+  right: 0;
+  max-width: 97%;
+  height: 1px;
+  display: block;
+}
+
+.bottom-flick::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 1px;
+  right: 0;
+  position: absolute;
+  background-color: dimgray;
+}
+
+.left-flick {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-left: 4.4px;
+  margin-bottom: 5px;
+  width: 1px;
+  max-height: 96%;
+}
+
+.left-flick::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 5px;
+  height: 0;
+  background-color: dimgray;
+}
+
+.main-container:hover .left-flick {
+  background-color: white;
+  animation: flicker-down 0.3s 0.4s forwards;
+}
+.main-container:hover .left-flick::after {
+  animation: flicker-down 0.3s 0.6s forwards;
+}
+
+.main-container:hover .bottom-flick {
+  background-color: white;
+  animation: flicker-right 0.2s 0.25s ease-in forwards;
+}
+.main-container:hover .bottom-flick::after {
+  animation: flicker-right 0.2s 0.3s ease-in forwards;
+}
+
+.main-container:hover .top-flick {
+  background-color: white;
+  animation: flicker-right 0.2s ease-in;
+}
+
+.main-container:hover .top-flick::after {
+  animation: flicker-right 0.2s 0.1s ease-in forwards;
+}
+
+.main-container:hover .right-flick {
+  background-color: white;
+  animation: flicker-down 0.3s 0.15s forwards;
+}
+
+.main-container:hover .right-flick::after {
+  background-color: dimgray;
+  animation: flicker-down 0.3s 0.2s ease-in forwards;
+}
+
+@keyframes flicker-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes flicker-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
