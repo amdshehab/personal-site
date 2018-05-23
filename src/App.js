@@ -9,10 +9,10 @@ class App extends Component {
     super(props);
   }
   render() {
-      const projects = ['About', 'Projects', 'Contact']
+      const headings = ['About', 'Projects', 'Contact']
     return (
       <div className="nav-container">
-        {projects.map((projects) => <FadeBox title={projects}/>)}
+        {headings.map((heading) => <FadeBox title={heading}/>)}
       </div>
     );
   }

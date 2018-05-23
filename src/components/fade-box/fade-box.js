@@ -17,7 +17,7 @@ export class FadeBox extends Component {
     render() {
 
         const box = {
-            width: '200px',
+            width: '130px',
             height: '200px',
             border: '1px solid black',
             backgroundColor: 'dimgray',
@@ -26,11 +26,11 @@ export class FadeBox extends Component {
 
         return (
             <div style={box} className="main-container">
-                <span>
+                <span className="mini-heading">
                     {this.props.title}
                 </span>
                 <span className="text-box">
-                    Hello
+                    {this.props.title.charAt(0)}
                 </span>
                 <span className="top-flick" />
                 <span className="right-flick" />

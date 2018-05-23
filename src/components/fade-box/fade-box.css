@@ -10,7 +10,12 @@
     width: 100%;
     top: 40%;
     font-size: 60px;
-  
+  }
+
+  .mini-heading {
+      display: block;
+      position: absolute;
+      margin: 15px;
   }
   
   .top-flick {
